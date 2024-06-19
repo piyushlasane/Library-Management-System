@@ -1,5 +1,5 @@
 package com.company;
-class Vachnalay{
+class CentralLibrary{
     private String[] books = new String[10];
     private int numberOfBooksInLibrary = 0;
 
@@ -35,7 +35,7 @@ class Vachnalay{
 }
 public class Library {
     public static void main(String[] args) {
-        Vachnalay kartik = new Vachnalay();
+        CentralLibrary kartik = new CentralLibrary();
         kartik.addBook("Physics");
         kartik.addBook("Chemistry");
         kartik.addBook("Maths");
