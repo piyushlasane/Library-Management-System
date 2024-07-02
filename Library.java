@@ -57,7 +57,11 @@ public class Library {
         CentralLibrary manager = new CentralLibrary();
         Scanner sc = new Scanner(System.in);
         while(true){
-            System.out.println("1. Add Book\n2. Show Available Books\n3. I want a book\n4. Want to return issued book");
+            System.out.println("\n1. Add Book");
+            System.out.println("2. Show Available Books");
+            System.out.println("3. I want a book");
+            System.out.println("4. Want to return issued book");
+            System.out.println("5. Exit");
             System.out.print("Enter Operation: ");
             int Operation = sc.nextByte();
             sc.nextLine();
@@ -80,6 +84,10 @@ public class Library {
                     String bookToReturn = sc.nextLine();
                     manager.returnBook(bookToReturn);
                     break;
+                case 5:
+                    System.out.println("Exiting the Library.");
+                    sc.close();
+                    return;
                 default:
                     System.out.println("Invalid Input");
                     break;
