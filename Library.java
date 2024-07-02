@@ -1,15 +1,14 @@
-package com.company;
 class CentralLibrary{
     private String[] books = new String[10];
     private int numberOfBooksInLibrary = 0;
 
     public void addBook(String bookName){
-        books[++numberOfBooksInLibrary] = bookName;
+        books[numberOfBooksInLibrary++] = bookName;
         System.out.println(bookName+" book is added to Library.");
     }
 
     public boolean Available(String BookName){
-        for (int i = 1; i <= numberOfBooksInLibrary; i++) {
+        for (int i = 0; i < numberOfBooksInLibrary; i++) {
             if(BookName.equals(books[i])) return true;
         }
         return false;
@@ -27,7 +26,7 @@ class CentralLibrary{
 
     public void showAvailableBooks(){
         System.out.println("Availabe books in Library are:");
-        for (int i = 1; i <= numberOfBooksInLibrary; i++) {
+        for (int i = 0; i < numberOfBooksInLibrary; i++) {
             System.out.println(books[i]);
         }
     }
@@ -35,11 +34,11 @@ class CentralLibrary{
 }
 public class Library {
     public static void main(String[] args) {
-        CentralLibrary kartik = new CentralLibrary();
-        kartik.addBook("Physics");
-        kartik.addBook("Chemistry");
-        kartik.addBook("Maths");
-        kartik.showAvailableBooks();
-        kartik.issueBooks("Maths");
+        CentralLibrary manager = new CentralLibrary();
+        manager.addBook("Physics");
+        manager.addBook("Chemistry");
+        manager.addBook("Maths");
+        manager.showAvailableBooks();
+        manager.issueBooks("Maths");
     }
 }
