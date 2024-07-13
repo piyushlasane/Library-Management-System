@@ -55,7 +55,7 @@ class CentralLibrary {
     public void showAvailableBooks() {
         System.out.println("Available books in Library are:");
         for (int i = 0; i < numberOfBooksInLibrary; i++) {
-            System.out.println(books[i]);
+            System.out.println("* "+books[i]);
         }
     }
 }
